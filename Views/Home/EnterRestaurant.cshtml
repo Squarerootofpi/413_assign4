@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Enter a Restaurant";
+}
+@model assign4_413.Models.RestaurantSuggestion
+<h1>@ViewBag.Title</h1>
+
+<form asp-action="EnterRestaurant" method="post">
+    <div>
+        <label asp-for="Name">Name: </label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="RestaurantName">Restaurant Name: </label>
+        <input asp-for="RestaurantName" />
+    </div>
+    <div>
+        <label asp-for="PhoneNumber">Phone Number: </label>
+        <input asp-for="PhoneNumber" />
+    </div>
+    <div>
+        <label asp-for="FavoriteDish">Favorite Dish: </label>
+        <input asp-for="FavoriteDish" />
+    </div>
+    <button type="submit">Submit</button>
+    <div asp-validation-summary="All"></div>
+</form>
+
+<p>Click <a asp-action="ViewSuggestions">here</a> to see all suggestions (Including ones you may have added!!!)</p>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Welcome to the Restaurant Ranker!";
+}
+@model IEnumerable<string>
+
+
+<div class="text-center">
+    <h1 class="display-4">@ViewBag.Title</h1>
+
+
+
+</div>
+
+<ul class="text-left">
+    <!--**Vomit**, sorry, I hate doing string lists, I like much better the implementation 
+        we did with the inumerables. I have those created, but for credit I did the string array version, 
+        even though it means that styling it nicely would be a nightmare. So, although bootstrap is 
+        included in this project, I didn't go all out trying to make this look pretty, because it won't.-->
+    @*This model passed in is the Models.RestaurantList.Restaurants object*@
+    @foreach (string m in Model)
+    {
+        <li>@m</li>
+    }
+</ul>

@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Suggestion List";
+}
+
+@model IEnumerable<string>
+<h1>@ViewBag.Title</h1>
+
+@*
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Restaurant Name</th>
+                    <th>Phone Number</th>
+                    <th>Favorite Dish</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (assign4_413.Models.RestaurantSuggestion m in Model)
+                {
+
+                    <tr>
+                        <td>@m.Name</td>
+                        <td>@m.RestaurantName </td>
+                        <td>@m.PhoneNumber</td>
+                        @if (m.FavoriteDish == "" | m.FavoriteDish is null)
+                        {
+                            <td>It's all tasty!</td>
+                        }
+                        else
+                        {
+                            <td>@m.FavoriteDish</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    *@
+<ol>
+    @foreach (string m in Model)
+    {
+        <li>@m</li>
+    }
+</ol>
