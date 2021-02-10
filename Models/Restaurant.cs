@@ -10,7 +10,7 @@ namespace assign4_413.Models
     {
         /// <summary>
         /// Constructor. We protect against nulls by making sure to throw errors
-        /// if any are set innappropriately. 
+        /// if any are set innappropriately. As well as other methods....
         /// </summary>
         /// <param name="rank"></param>
         /// <param name="restaurantName"></param>
@@ -48,6 +48,6 @@ namespace assign4_413.Models
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string PhoneNumber { get; set; }
 
-        public string WebsiteLink { get; set; } = "Coming Soon.";
+        public string? WebsiteLink { get; set; } = "Coming Soon.";
     }
 }
